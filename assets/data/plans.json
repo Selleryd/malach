@@ -1,0 +1,43 @@
+{
+  "plans": [
+    {
+      "id": "core",
+      "name": "Malach Core",
+      "tagline": "For one store that needs a sharper operating picture.",
+      "features": [
+        "One Shopify store",
+        "Google Ads and Shopify intelligence",
+        "Profit Center and Attribution",
+        "Malach Chat and Voice",
+        "Observe and Approval modes"
+      ]
+    },
+    {
+      "id": "autonomous",
+      "name": "Malach Autonomous",
+      "tagline": "For operators ready for governed autonomous optimization.",
+      "featured": true,
+      "features": [
+        "Everything in Core",
+        "Auto Agent and Agent Canvas",
+        "Canary and Full Auto authority",
+        "Advantage market intelligence",
+        "Evolution Studio",
+        "Priority support"
+      ]
+    },
+    {
+      "id": "portfolio",
+      "name": "Malach Portfolio",
+      "tagline": "For multiple stores, brands and operators.",
+      "contact": true,
+      "features": [
+        "Up to 20 isolated stores",
+        "Portfolio-wide God View",
+        "Per-store credentials and authority",
+        "Team workflows and governance",
+        "Custom onboarding and support"
+      ]
+    }
+  ]
+}

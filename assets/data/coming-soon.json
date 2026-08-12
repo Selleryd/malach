@@ -1,0 +1,28 @@
+{
+  "features": [
+    {
+      "name": "Creative Intelligence Studio",
+      "description": "Generate, score and test new creative directions against product economics and measured asset outcomes."
+    },
+    {
+      "name": "Cross-channel expansion",
+      "description": "Extend Malach's contribution-profit intelligence to additional paid acquisition platforms."
+    },
+    {
+      "name": "Mobile companion",
+      "description": "Monitor decisions, approve actions and speak with Malach from a native mobile experience."
+    },
+    {
+      "name": "Public API and SDK",
+      "description": "Bring Malach's evidence, opportunity and action ledger into external commerce systems."
+    },
+    {
+      "name": "Team roles and approvals",
+      "description": "Granular operator roles, approval policies and multi-user governance for larger organizations."
+    },
+    {
+      "name": "Adaptive landing-page experiments",
+      "description": "Connect paid acquisition decisions to controlled landing-page tests and measured contribution lift."
+    }
+  ]
+}
