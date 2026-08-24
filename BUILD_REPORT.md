@@ -1,53 +1,39 @@
-# Malach Public Website Build Report
+# Malach V7.1 Build Report
 
-## Scope completed
+## Scope
 
-- 16 public routes
-- premium dark and light design system
-- responsive mobile, tablet, laptop and desktop layouts
-- official Malach logo variants with safe padding
-- interactive Agent Canvas
-- interactive financial chart with multi-series selection and trend comparison
-- Advantage research-browser demonstration with source provenance
-- Attribution, Voice, Chat, Evolution, multi-store and authority demonstrations
-- data-driven pricing structure
-- Stripe Checkout, Customer Portal and signed-webhook serverless endpoints
-- optional subscription entitlement forwarding
-- privacy, terms, security and support routes
-- SEO, Open Graph, sitemap, robots and web manifest
-- Vercel configuration and security headers
-- GitHub validation workflow
+- 23 public routes plus 404
+- New consumer-first homepage positioning
+- Invented product and store demonstration data
+- Seven interactive feature simulations
+- Product-level hero simulation
+- Fragmented-to-unified comparison
+- Interactive operating loop
+- Channel command simulation
+- Governed authority controls
+- Monthly and annual pricing
+- Preserved Stripe, contact, public-config and status APIs
 
-## Validation performed
+## Validation completed
 
-```text
-Static route and asset validation: PASS
-JavaScript syntax validation: PASS
-Stripe price allowlist test: PASS
-Stripe webhook signature test: PASS
-Browser render smoke: PASS — 14 primary routes
-Desktop horizontal overflow: PASS
-Mobile horizontal overflow: PASS
-Theme interaction: PASS
-Command palette: PASS
-Mobile navigation: PASS
-Agent Canvas tabs: PASS
-Financial series toggles: PASS
-Pricing interval toggle: PASS
-Duplicate HTML ID check: PASS
-Image alt-attribute check: PASS
-Credential-pattern scan: PASS
+- Static route, link, asset, copy, pricing, and API validation: PASS
+- Visual contract: PASS
+- Stripe price allowlist and webhook signature: PASS
+- Desktop and mobile browser smoke: PASS
+- JavaScript and Python syntax: PASS
+
+Re-run with:
+
+```bash
+npm test
+python3 scripts/browser_smoke.py
 ```
 
-## Public-launch dependencies still required
+## V7.1 messaging refinement
 
-- final approved pricing and Stripe price IDs
-- live Stripe keys and webhook secret
-- a verified Malach subscription-entitlement endpoint or Supabase schema
-- support-delivery webhook or active support@malach.app mailbox
-- legal review of Privacy and Terms
-- live domain and browser acceptance on malach.app
-- Google OAuth brand/domain verification
-- final Safari and real-device tests
-
-The website does not claim that coming-soon features are currently available and does not claim unsupported security certifications.
+- About story: Angel and Messenger, working 24/7 for profitable decisions and actions.
+- Proprietary decision algorithms explained in buyer-friendly language.
+- Intelligence expanded to 24/7 competitor and market monitoring.
+- Auto Agent + Agent Canvas positioned as the system that actually prepares and executes work.
+- New interactive decision-model, Agent Canvas and 24/7 operations simulations.
+- Heading scale reduced for a more refined premium hierarchy.

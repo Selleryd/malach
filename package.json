@@ -1,14 +1,14 @@
 {
   "name": "malach-public-website",
-  "version": "1.0.0",
+  "version": "7.1.0",
   "private": true,
   "type": "module",
-  "description": "Public website for Malach autonomous commerce intelligence.",
+  "description": "Malach V7.1 public website \u2014 always-on intelligence, proprietary decision models and governed 24/7 execution.",
   "scripts": {
-    "dev": "node scripts/dev-server.mjs",
-    "generate": "python3 scripts/generate_site.py",
-    "validate": "node scripts/validate.mjs",
-    "test": "node scripts/validate.mjs && node scripts/api_smoke.mjs"
+    "generate": "python3 scripts/build_site_v7.py",
+    "dev": "python3 scripts/preview.py",
+    "validate": "python3 scripts/validate.py && python3 scripts/visual_contract.py && node --check assets/js/malach-v7.js && node --check assets/js/home-v7.js && node --check assets/js/pricing-v7.js && node --check assets/js/status-v7.js",
+    "test": "npm run validate && node scripts/api_smoke.mjs"
   },
   "engines": {
     "node": ">=20"

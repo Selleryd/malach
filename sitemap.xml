@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://malach.app/</loc><priority>1.0</priority></url>
+  <url><loc>https://malach.app/</loc></url>
   <url><loc>https://malach.app/product/</loc></url>
-  <url><loc>https://malach.app/auto-agent/</loc></url>
+  <url><loc>https://malach.app/solutions/</loc></url>
+  <url><loc>https://malach.app/solutions/google-ads/</loc></url>
+  <url><loc>https://malach.app/solutions/shopify/</loc></url>
+  <url><loc>https://malach.app/solutions/portfolio/</loc></url>
   <url><loc>https://malach.app/intelligence/</loc></url>
+  <url><loc>https://malach.app/auto-agent/</loc></url>
   <url><loc>https://malach.app/advantage/</loc></url>
   <url><loc>https://malach.app/attribution/</loc></url>
   <url><loc>https://malach.app/voice/</loc></url>
-  <url><loc>https://malach.app/security/</loc></url>
+  <url><loc>https://malach.app/vision/</loc></url>
+  <url><loc>https://malach.app/channels/</loc></url>
   <url><loc>https://malach.app/pricing/</loc></url>
+  <url><loc>https://malach.app/security/</loc></url>
   <url><loc>https://malach.app/about/</loc></url>
   <url><loc>https://malach.app/support/</loc></url>
+  <url><loc>https://malach.app/contact/</loc></url>
+  <url><loc>https://malach.app/docs/</loc></url>
+  <url><loc>https://malach.app/status/</loc></url>
   <url><loc>https://malach.app/privacy/</loc></url>
   <url><loc>https://malach.app/terms/</loc></url>
+  <url><loc>https://malach.app/login/</loc></url>
 </urlset>

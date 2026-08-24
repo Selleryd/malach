@@ -10,5 +10,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Validate routes and JavaScript
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install validation dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-site.txt
+          python -m playwright install --with-deps chromium
+      - name: Validate routes, APIs, and JavaScript
         run: npm test
+      - name: Browser smoke — desktop and mobile
+        run: python scripts/browser_smoke.py
