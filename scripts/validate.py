@@ -40,7 +40,9 @@ for file in files:
     for forbidden in ('assets/css/styles.css','assets/css/flagship.css','assets/css/v5.css','assets/css/malach-v6.css','assets/js/site.js','assets/js/flagship.js','assets/js/malach-v6.js','theme-toggle','light-zone','cta-orbit','hero-orbit','orbit-ring'):
         if forbidden in text: errors.append(f'{file}: obsolete artifact {forbidden}')
     if 'assets/css/malach-v7.css' not in text: errors.append(f'{file}: missing V7 design system')
+    if 'assets/css/mobile-v72.css' not in text: errors.append(f'{file}: missing V7.2 mobile design system')
     if 'assets/js/malach-v7.js' not in text: errors.append(f'{file}: missing V7 interaction layer')
+    if 'assets/js/mobile-v72.js' not in text: errors.append(f'{file}: missing V7.2 mobile interaction layer')
 
 home=(ROOT/'index.html').read_text()
 for needle in ('No more ad dollars','Your intelligence agency. Your operating force.','Advertising gets expensive when decisions get unclear.','One system. Every critical layer.','From connected data to a measured result.','Every channel through the same profit lens.','Choose exactly how much authority Malach has.','Not another dashboard. An operating system.','Turn better intelligence into better actions—around the clock.'):
@@ -68,7 +70,7 @@ for forbidden in ('Cloud SQL','Worker','Public website'):
     if forbidden in status: errors.append(f'status exposes {forbidden}')
 for backend in ('api/create-checkout-session.js','api/create-portal-session.js','api/stripe-webhook.js','api/contact.js','api/public-config.js'):
     if not (ROOT/backend).exists(): errors.append(f'missing backend {backend}')
-for asset in ('assets/css/malach-v7.css','assets/js/malach-v7.js','assets/js/home-v7.js','assets/js/pricing-v7.js','assets/js/status-v7.js'):
+for asset in ('assets/css/malach-v7.css','assets/css/mobile-v72.css','assets/js/malach-v7.js','assets/js/mobile-v72.js','assets/js/home-v7.js','assets/js/pricing-v7.js','assets/js/status-v7.js'):
     if not (ROOT/asset).exists(): errors.append(f'missing asset {asset}')
 if (ROOT/'changelog').exists(): errors.append('changelog should not exist')
 
@@ -79,4 +81,4 @@ for file in files:
 
 if errors:
     print('\n'.join('ERROR '+e for e in errors)); raise SystemExit(1)
-print(f'PASS: {len(ROUTES)} routes, links, assets, consumer copy, invented demo data, pricing truth, and preserved APIs')
+print(f'PASS: {len(ROUTES)} routes, links, assets, consumer copy, mobile V7.2 layer, pricing truth, and preserved APIs')

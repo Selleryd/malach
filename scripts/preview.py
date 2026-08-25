@@ -6,6 +6,7 @@ import os
 ROOT = Path(__file__).resolve().parents[1]
 os.chdir(ROOT)
 PORT = int(os.environ.get('PORT', '8080'))
+HOST = os.environ.get('HOST', '127.0.0.1')
 
 class Handler(SimpleHTTPRequestHandler):
     def end_headers(self):
@@ -41,6 +42,9 @@ class Handler(SimpleHTTPRequestHandler):
         super().do_GET()
 
 if __name__ == '__main__':
-    server = ThreadingHTTPServer(('127.0.0.1', PORT), Handler)
-    print(f'Malach preview: http://127.0.0.1:{PORT}', flush=True)
+    server = ThreadingHTTPServer((HOST, PORT), Handler)
+    display_host = '127.0.0.1' if HOST in ('0.0.0.0','::') else HOST
+    print(f'Malach preview: http://{display_host}:{PORT}', flush=True)
+    if HOST == '0.0.0.0':
+        print('LAN preview enabled: open http://<your-mac-ip>:%s on your phone' % PORT, flush=True)
     server.serve_forever()

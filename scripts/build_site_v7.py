@@ -6,7 +6,7 @@ from html import escape
 import json
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "7.1.0"
+VERSION = "7.2.0"
 APP = "https://app.malach.app"
 SUPPORT = "support@malach.app"
 
@@ -172,6 +172,7 @@ def head(route: str) -> str:
 <link rel="apple-touch-icon" href="/assets/media/apple-touch-icon.png?v={VERSION}">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/assets/css/malach-v7.css?v={VERSION}">
+<link rel="stylesheet" href="/assets/css/mobile-v72.css?v={VERSION}">
 <script defer src="/runtime-config.js"></script>
 {json_ld}
 </head>'''
@@ -261,7 +262,7 @@ def command_palette() -> str:
 def shell(route: str, body: str, scripts: list[str] | None = None, body_class: str = "") -> str:
     scripts = scripts or []
     script_tags = ''.join(f'<script type="module" src="{src}?v={VERSION}"></script>' for src in scripts)
-    return f'''<!doctype html><html lang="en" data-malach-version="{VERSION}">{head(route)}<body class="{escape(body_class)}" data-page="{route}">{header(route)}<main id="main">{body}</main>{footer()}{command_palette()}<script type="module" src="/assets/js/malach-v7.js?v={VERSION}"></script>{script_tags}</body></html>'''
+    return f'''<!doctype html><html lang="en" data-malach-version="{VERSION}">{head(route)}<body class="{escape(body_class)}" data-page="{route}">{header(route)}<main id="main">{body}</main>{footer()}{command_palette()}<script type="module" src="/assets/js/malach-v7.js?v={VERSION}"></script><script type="module" src="/assets/js/mobile-v72.js?v={VERSION}"></script>{script_tags}</body></html>'''
 
 
 def section_head(eyebrow: str, title: str, copy: str = "", align: str = "") -> str:
